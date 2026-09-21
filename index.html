@@ -1,3 +1,212 @@
-<h1>홍길동</h1>
-<p>안녕하세요. 저는 서울대학교에서 공부하고 있으며 AI, 웹 개발, 기술과 사회의 접점에 관심이 있습니다.</p>
-<p>복잡한 문제를 구조적으로 이해하고, 이를 실제 프로젝트로 구현하는 일을 좋아합니다.</p>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIREINA | Personal Webpage</title>
+  <style>
+    :root {
+      --bg: #0f4f4f;
+      --bg-deep: #0a3b3b;
+      --surface: rgba(255, 255, 255, 0.10);
+      --surface-strong: rgba(255, 255, 255, 0.14);
+      --border: rgba(255, 255, 255, 0.16);
+      --text: #f4fbfb;
+      --muted: #d3ece9;
+      --accent: #b8e1db;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(184, 225, 219, 0.20), transparent 25%),
+        radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.10), transparent 22%),
+        linear-gradient(160deg, var(--bg), var(--bg-deep));
+      min-height: 100vh;
+      line-height: 1.7;
+      padding: 24px;
+    }
+
+    .container {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius-xl) + 6px);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      padding: clamp(28px, 5vw, 56px);
+      margin-top: 24px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: var(--accent);
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 10px;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 62ch;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2vw, 1.18rem);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      grid-column: span 6;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .card.full {
+      grid-column: span 12;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    a {
+      color: var(--text);
+    }
+
+    .contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding: 16px;
+      }
+
+      .card,
+      .card.full {
+        grid-column: span 12;
+      }
+
+      .hero {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main class="hero">
+      <div class="eyebrow">Personal Webpage</div>
+      <h1>AIREINA</h1>
+      <p class="lead">
+        안녕하세요. 저는 서울에서 공부하는 대학생으로, 다양한 분야의 지식을 연결해 실제 프로젝트와 아이디어로 구현하는 것에 관심이 있습니다.
+        특히 AI, 웹 개발, 법·금융·바이오·반도체처럼 기술과 사회가 만나는 지점을 탐구하는 일을 좋아합니다.
+      </p>
+
+      <section class="grid">
+        <article class="card">
+          <h2>소개</h2>
+          <p>
+            저는 복잡한 문제를 구조적으로 이해하고, 이를 글·발표·웹페이지 같은 형태로 정리해 전달하는 과정을 좋아합니다.
+            새로운 기술을 배우고 직접 실험해 보는 데에도 큰 흥미를 가지고 있습니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>관심사</h2>
+          <ul>
+            <li>인공지능과 AI 에이전트</li>
+            <li>웹 개발과 소프트웨어 프로토타이핑</li>
+            <li>법, 금융, 바이오테크, 반도체 산업</li>
+            <li>연구, 기획, 발표 자료 디자인</li>
+          </ul>
+        </article>
+
+        <article class="card full">
+          <h2>연락처</h2>
+          <div class="contact-list">
+            <a class="chip" href="https://github.com/AIREINA" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="chip">Email: your-email@example.com</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <p class="footer">
+      Built as a static page for GitHub Pages.
+    </p>
+  </div>
+</body>
+</html>
